@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '20' 
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+      env:
+        REACT_APP_API_GEONAMES_SECRET_KEY: ${{ secrets.REACT_APP_API_GEONAMES_SECRET_KEY}}
+        REACT_APP_API_WEATHER_SECRET_KEY: ${{ secrets.REACT_APP_API_WEATHER_SECRET_KEY}} 
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+        branch: gh-pages  
+        folder: build
+        token: ${{ secrets.GITHUB_TOKEN }}
