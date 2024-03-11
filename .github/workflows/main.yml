@@ -21,8 +21,8 @@ jobs:
     - name: Build
       run: npm run build
       env:
-        REACT_APP_API_WEATHER_SECRET_KEY: ${{ secrets.REACT_APP_API_WEATHER_SECRET_KEY}} 
         REACT_APP_API_GEONAMES_SECRET_KEY: ${{ secrets.REACT_APP_API_GEONAMES_SECRET_KEY}}
+        REACT_APP_API_WEATHER_SECRET_KEY: ${{ secrets.REACT_APP_API_WEATHER_SECRET_KEY}} 
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v4
