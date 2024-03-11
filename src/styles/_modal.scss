@@ -1,0 +1,17 @@
+.modal-backdrop {
+  @include flex($jsf-content: flex-end, $align: stretch);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  @include flex($direction: column, $jsf-content: center, $align: center );
+  @include modulas-elememnts-padding-border($padd: 20px, $bord-radius: 5px);
+  background-color: $modals-bg-color;
+  width: 100%;
+}

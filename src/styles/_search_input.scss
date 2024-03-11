@@ -1,0 +1,54 @@
+.search-input-container {
+  width: calc(50vw + 2vmin);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  font-size: calc(1vw + 2vmin);
+  width: 100%;
+  outline: none;
+  color: inherit;
+  @include modulas-elememnts-padding-border( $bord-radius: 30px);
+  padding: calc(1vw + 1vmin) ;
+  padding-left: calc(2vw + 1vmin);
+  border: 1px solid $main-color;
+  background-color: transparent;
+
+  &:hover {
+    border: 1px solid $hover-color;
+    transition: all 0.4s;
+  }
+
+  &:focus {
+    border: 1px solid $focus-color;
+  }
+}
+
+.search-input-shown {
+  animation: scaleInput 0.5s;
+}
+
+.search-input-hiden {
+  animation: hideInput 0.3s;
+}
+
+input::placeholder {
+  opacity: 0.7;
+  color: $main-color;
+  font-size: calc(1vw + 2vmin);
+}
+
+.search-input-icon {
+  position: absolute;
+  right: calc(1vw + 1vmin);
+  @include flex($jsf-content: end, $align: center);
+
+  & button > svg {
+    width:  calc((2vw + 2vmin) );
+    height:  calc((2vw + 2vmin) );
+  }
+}
+

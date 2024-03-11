@@ -1,0 +1,21 @@
+.present-cast {
+  @include flex($direction: column, $align: center);
+  padding-top: calc(10vw + 3vh + 1vmin);
+  // justify-content: center;
+  padding-top: calc(10vh + 1vw);
+  
+  &-temperature {
+    color: #fbed96;
+  }
+
+  &-icon {
+    margin: 20px 0 0 0;
+  }
+
+  & img {
+    width: calc(75vw);
+    height: calc(65vw);
+  }
+}
+
+

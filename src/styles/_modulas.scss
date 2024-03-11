@@ -1,0 +1,46 @@
+.spinner { 
+  & svg {
+    width: calc(60vw);
+    height: calc(60vw);
+    animation: sunSpin 10s linear infinite;
+  }
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  &-icon {
+    svg {
+      width: calc(25vw);
+      height: calc(15vh);
+    }
+  }
+}
+
+.no-weather-data {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+}
+
+.empty-trips-list-msg {
+  @extend .slide-container;
+  &-title {
+    font-size: calc(6vw + 2vmin);
+  }
+
+  &-action svg {
+    width: calc(15vw);
+    height: calc(10vh);
+  }
+}

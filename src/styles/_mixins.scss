@@ -1,0 +1,28 @@
+@mixin bg-main-container($deg: 180deg, $first-color: rgb(74,74,74), $second-color: rgb(31, 30, 30), $bg-size: 200% 250%) {
+  background-image: linear-gradient($deg, $first-color, $second-color, );
+  background-size: $bg-size;
+}
+
+@mixin flex($direction: row, $jsf-content: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jsf-content;
+  align-items: $align;
+}
+
+@mixin modulas-elememnts-padding-border($padd: 0, $bord-radius: 0 ) {
+  padding: $padd;
+  border-radius: $bord-radius;
+}
+
+// @mixin responsive-font-size($min-font-size, $max-font-size, $min-viewport-width, $max-viewport-width) {
+//   font-size: calc(#{$min-font-size} + (#{$max-font-size} - #{$min-font-size}) * ((100vw - #{$min-viewport-width}) / (#{$max-viewport-width} - #{$min-viewport-width})));
+//   @media (max-width: #{$min-viewport-width}) {
+//     font-size: $min-font-size;
+//   }
+  
+//   // Fallback for very large viewports
+//   @media (min-width: #{$max-viewport-width}) {
+//     font-size: $max-font-size;
+//   }
+// }

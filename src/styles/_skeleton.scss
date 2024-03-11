@@ -1,0 +1,28 @@
+.cast-skeleton-title {
+  background-color: $skeleton-bg;
+  @include bg-main-container($deg: 90deg, $first-color: rgb(116, 98, 158,0.3), $second-color: rgba(13,16,33,0.1));
+  height: 25px;
+  width: 30%;
+  border-radius: 10px;
+  margin: 20px  auto;
+  animation: gradient 2s ease infinite;
+}
+
+.hiden-skeleton {
+  display: none;
+}
+
+.daily-trip-cast-skeleton-card {
+  background-color: $skeleton-bg;
+  @include bg-main-container($deg: 90deg, $first-color: rgb(116, 98, 158,0.3), $second-color: rgba(13,16,33,0.1));
+  height: 155px;
+  width: 130px;
+  margin-right: 5px;
+  border-radius: 20px;
+  animation: gradient 2s ease infinite;
+}
+
+.skeleton-padding {
+  padding: 10px 0;
+}
+

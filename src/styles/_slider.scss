@@ -1,0 +1,26 @@
+.slide-container {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  @include flex($jsf-content: center, $align: center);
+  @include bg-main-container($first-color: #202a55, $second-color:  #74629e);
+  width: 100%;
+  overflow: hidden;
+  z-index: 6;
+}
+
+.slide {
+  flex-direction: column;
+  animation: fadeIn 1s forwards;
+  padding: 30px;
+  text-align: center;
+
+  &:nth-last-child(1) {
+    font-size: calc(6vw + 2vmin);
+  }
+
+  &-btn {
+    @include flex($jsf-content: center, $align: center);
+    margin: 20px;
+  }
+}

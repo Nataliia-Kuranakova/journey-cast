@@ -1,0 +1,34 @@
+.card-in {
+  animation: slideIn 0.3s forwards;
+}
+
+.card-out {
+  animation: slideOut 0.3s forwards;
+}
+
+.data-fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.modal-fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal-fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.autocomplete-fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+.autocomplete-fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.shrink-in {
+  animation: shrinkIn 0.5s ease;
+}
+.shrink-out {
+  animation: shrinkOut 0.3s ease;
+}

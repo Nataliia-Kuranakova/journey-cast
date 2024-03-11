@@ -1,0 +1,120 @@
+.trip-list {
+  padding: 0 5%; 
+  padding-top: calc(14vw + 3vh + 1vmin);
+  width: 100%;
+  &-warning {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.trip-wrapper {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.trip {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  min-height: 160px;
+  @include flex($jsf-content: space-between);
+  @include modulas-elememnts-padding-border( $bord-radius: 20px);
+  padding: calc(3vw + 3vmin);
+  padding-right: calc(5vw + 3vmin);
+  box-shadow: $cast-card-shadow;
+  background-color: $trip-card-bg;
+  transition: all 0.4s ease;
+
+  &-city {
+    height: 100%;
+    @include flex($jsf-content: space-between, $direction: column);
+
+    & h3 > p {
+      margin: 5px 0 0 0;
+      font-weight: 300;
+    }
+
+    & span {
+      margin: 10px;
+
+      & svg {
+        width:  calc((4vw + 2vmin));
+        height:  calc((4vw + 2vmin) );
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-cur-weather-cust {
+    @include flex($direction: column, $align: center, $jsf-content: space-between);
+    text-align: center;
+    height: 100%;
+   
+    p {
+      opacity: 0.7;
+    }
+
+    &-icon {
+      margin: 13px 0 0 0;
+
+      & img {
+        width: calc(13vw);
+        height: calc(13vw);
+      }
+    }
+  }
+
+  &-edit-btn {
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+    padding: 5px;
+    transition: all 0.6s;
+
+    & svg {
+      width:  calc((5vw + 2vmin));
+      height:  calc((5vw + 2vmin) );
+      opacity: 0.5;
+    }
+  }
+}
+
+.expired-trip { 
+  background-color: rgba(52, 52, 54, 0.6);  
+  opacity: 0.7;
+}
+
+.trip-edit-btns {
+  @include flex($direction: column, $jsf-content: space-around);
+  animation: btnsaSlideIn 0.6s forwards;
+
+  & svg {
+    width:  calc((6vw + 2vmin));
+    height:  calc((6vw + 2vmin) );
+  }
+}
+
+.card-spinner {
+  margin: 20px 0 0 0;
+
+  & svg {
+    width: calc(14vw + 2vmin);
+    height: calc(7vh + 2vmin);
+    animation: sunSpin 10s linear infinite;
+  }
+}
+
+.trip-card-error {
+
+  &-icon {
+    & svg {
+      width: calc(14vw + 2vmin);
+      height: calc(7vh + 2vmin);
+    }
+  }
+}

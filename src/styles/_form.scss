@@ -1,0 +1,9 @@
+.form {
+  width: 100%;
+  position: relative;
+
+  &-buttons {
+    width: 100%;
+    @include flex($jsf-content: space-between);
+  }
+}

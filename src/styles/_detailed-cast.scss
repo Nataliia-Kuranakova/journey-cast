@@ -1,0 +1,75 @@
+.detailed-cast {
+  text-align: center;
+}
+
+.detailed-cast-list-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: calc(2vw + 2vmin);
+  margin: 20px 0 0 0;
+
+  & > div {
+    padding: 20px;
+  }
+
+  & p {
+    margin: 0; 
+  }
+
+  & svg {
+    opacity: 0.5;
+  }
+
+  & span {
+    margin-right: 20px;
+  }
+}
+
+.uv-filter, .sun-move, .visibility, .humidity {
+  @include flex($direction: column, $jsf-content: space-between, $align: center);
+  gap: 15px;
+  border-radius: 20px;
+  min-height: 100px;
+  ///
+  background-color: $cast-card-bg;
+  box-shadow: $cast-card-shadow;
+  ///
+}
+
+.uv-filter, .visibility, .humidity {
+  & svg {
+    width:  calc(10vw + 2vmin);
+    height:  calc(5vw + 2vmin);
+  }
+}
+
+.sun-move {
+  & svg {
+    width:  calc(6vw + 2vmin);
+    height:  calc(2vw + 2vmin);
+  }
+}
+
+.wind {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  border-radius: 20px;
+  box-shadow: $cast-card-shadow;
+  background-color: $cast-card-bg;
+  text-align: center;
+
+  &-content-wrapper {
+    @include flex($jsf-content: space-between, $align: center);
+    padding:  10px;
+  }
+
+  & svg {
+    width:  calc(14vw + 2vmin);
+    height:  calc(7vw + 2vmin);
+  }
+}
+
+.wind-dscr {
+  @include flex($direction: column);
+  gap: 10px;
+}

@@ -1,0 +1,61 @@
+.button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+}
+
+.button-border {
+  @include modulas-elememnts-padding-border($padd: 12px, $bord-radius: 10px);
+  border: 1px solid $focus-color;
+  text-transform: uppercase;
+  margin: 0 1px;
+}
+
+.button-bg {
+  border-radius: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: background-color 0.4s;
+  
+
+  &--delete {
+    background-color: rgb(199, 94, 94);
+    &:hover {
+      background-color: rgba(205, 97, 97,0.4);
+    }
+  }
+  &--edit {
+    background-color: rgb(48, 151, 95);
+    &:hover {
+      background-color: rgba(97, 205, 146,0.4);
+    }
+  }
+}
+
+.button-gradient {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgb(59, 74, 161),  #5E5DF0);
+  background-size: 200% 300%;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 20px 20px; 
+  transition: all 0.4s;
+
+  &:hover {
+    background-size: 400% 100%;
+    transform: translateY(-2px);
+    transition: all 0.4s;
+  }
+
+  & svg {
+    height: calc(2vw + 2vmin);
+    width: calc(2vw + 2vmin);
+  }
+}
+

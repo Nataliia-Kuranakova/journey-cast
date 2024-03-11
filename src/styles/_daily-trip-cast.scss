@@ -1,0 +1,53 @@
+.daily-trip-cast {
+  @include flex($direction: column, $align: center);
+  
+  &-container {
+    display: flex;
+    padding: 10px 2px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-title {
+    margin: 30px 0 0 0;
+  }
+
+  &-card {
+    @include flex($direction: column, $align: center);
+    padding: 10px;
+
+    & img {
+      width: calc(10vw);
+      height: calc(15vw);
+    }
+
+    & span {
+      font-weight: 100;
+      padding-left: 2px;
+    }
+
+    & p {
+      margin: 0;
+    }
+
+    &-temperature {
+      text-align: center;
+    }
+
+    &-maxT {
+      color: #fbed96;
+    }
+
+    &-minT {
+      color: $focus-color;
+      color: #b4e2fd;
+    }
+  }
+}

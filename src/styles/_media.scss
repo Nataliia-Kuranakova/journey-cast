@@ -1,0 +1,390 @@
+@media screen and (max-width: 425px) {
+  .flex {
+    display: flex;
+  }
+  
+  .none {
+    display: none;
+  }
+ 
+  .height-less {
+    height: 66vh;
+    padding-top: calc(8vh + 1vw);
+    animation: shrink 1s;
+  }
+  
+  .height-more {
+    height: 108vh;
+    padding-top: calc(22vh + 1vw);
+    animation: elongate 0.8s;
+  }
+
+  .fixed-arrow{
+    position: fixed;
+    width: 100%;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1s forwards;
+    
+    & svg {
+      width:  calc((6vw + 2vmin) );
+      height:  calc((6vw + 2vmin) );
+      opacity: 0.5;
+      animation: bounce 2s linear 2 1s;
+    }
+  }
+}
+
+@media  screen and (min-width: 821px) {
+  body {
+    font-size: calc((3vw + 2vmin) * 0.3);
+  }
+
+  .slide-container  {
+    z-index: 8;
+  }
+
+  .empty-trips-list-msg {
+    @extend .slide-container;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1% 5%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    /// work with this dimantions !!!!!
+    // width: calc((70vw + 70vh + 1vmin) * 0.7 );
+    ///////
+  }
+
+  .aside-container {
+    position: relative;
+    overflow-y: auto;
+    height: 100vh;
+    width: 30%;
+    background-color: rgba(13,16,33,0.5);
+    padding: 100px 0 0 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .aside-container--empty-trips-list {
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    background-color: $interactive-modul-color;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // !!!!!!!!!! work with error!!!!!
+  .header {
+    width: 30%;
+    z-index: 7; 
+    backdrop-filter: blur(80px);
+  }
+
+  .nav {
+    & svg {
+      width:  calc((7vw + 2vmin) * 0.3);
+      height:  calc((7vw + 2vmin) * 0.3 );
+    }
+  }
+
+  .modal-backdrop-first-visit {
+    @include flex($jsf-content: center, $align: center);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0px);
+  }
+
+  .modal-content-first-visit {
+    width: 70%;
+    height: 80%;
+  }
+
+  .modal-content {
+    width: 70%;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  .search-input-container {
+    width: calc((50vw + 2vmin) * 0.3);
+  }
+
+  .search-input-icon {
+    right: calc((1vw + 1vmin) * 0.3);
+  
+    & button > svg {
+      width:  calc((2vw + 2vmin) * 0.3);
+      height:  calc((2vw + 2vmin) * 0.3 );
+    }
+  }
+
+  .search-input {
+    height:  calc((6vw + 2vmin) * 0.3);
+    font-size: calc((2vw + 2vmin) * 0.3);
+    padding: calc((1vw + 1vmin) * 0.3);
+    padding-left: calc((2vw + 1vmin) * 0.3);
+  }
+
+  input::placeholder {
+    font-size: calc((2vw + 2vmin) * 0.3);
+  }
+
+  .trip-list {
+    padding-top: calc(0);
+  }
+
+  .trip {
+    @include modulas-elememnts-padding-border($padd: 20px 40px, $bord-radius: 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.4s ease;
+
+    &-city-name {
+      & span {
+        margin: 10px;
+  
+        & svg {
+          width:  calc((4vw + 2vmin) * 0.3);
+          height:  calc((4vw + 2vmin) * 0.3);
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &-edit-btn {
+      opacity: 0;
+
+        &:hover {
+        background-color: rgba(128, 128, 128,0.3);
+        border-radius: 50px;
+        transition: all 0.6s;
+        }
+
+      & svg {
+        width:  calc((6vw + 2vmin) * 0.3);
+        height:  calc((6vw + 2vmin) * 0.3);
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px $focus-color;
+      transition: box-shadow 0.4s;
+    }
+    
+    &:hover &-edit-btn{
+      opacity: 0.5;
+    }
+
+    &-cur-weather-cust {
+      & img {
+        width: calc(15vw * 0.3);
+        height: calc(15vw * 0.3);
+      }
+    }
+
+    &-edit-btns {
+      & button > svg {
+        width:  calc((6vw + 2vmin)* 0.3);
+        height:  calc((6vw + 2vmin) * 0.3 );
+      }
+    }
+  }
+
+  .trip.focused .trip-edit-btn {
+    opacity: 1;
+  }
+
+  ////////////
+  .present-cast {
+    height: 80vh;
+    justify-content: center;
+    padding: 0;
+
+    & img {
+      width: calc(75vw * 0.3);
+      height: calc(65vw * 0.3);
+    }
+  }
+
+  .daily-trip-cast-container {
+    gap: 20px;
+  }
+
+  .daily-trip-cast-card-temperature {
+    display: flex;
+    gap: 15px;
+  }
+
+  .daily-trip-cast-container {
+    background-color: transparent;
+  }
+
+  .daily-trip-cast-card {
+    width: calc((25vw + 2vmin) * 0.3);
+    height: 105%;
+    background-color: $cast-card-bg;
+    box-shadow: $cast-card-shadow;
+    border-radius: 20px;
+    gap: 10px;
+
+    &:hover {
+      border-radius: 20px;
+    }
+
+    & img {
+      width: calc(12vw * 0.3);
+      height: calc(12vw * 0.3);
+    }
+  }
+
+  .detailed-cast-list-data {
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: calc((2vw + 2vmin) * 0.3);
+  }
+
+  .wind {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    background-color: rgba(13,16,33,0.5);
+
+    &-content-wrapper {
+      margin: 10px 0 0 0;
+      padding: 0 20px;
+    }
+
+    & svg {
+      width: calc(10vw * 0.7);
+      height: calc(10vh * 0.7);
+    }
+  }
+
+  .uv-filter, .sun-move, .visibility, .humidity {
+    background-color: rgba(13,16,33,0.5);
+  }
+
+  .uv-filter, .visibility, .humidity {
+    & svg {
+      width:  calc((14vw + 2vmin) * 0.3);
+      height:  calc((7vw + 2vmin) * 0.3);
+    }
+  }
+  
+  .sun-move {
+    & svg {
+      width:  calc((3vw + 2vmin) * 0.3);
+      height:  calc((2vw + 2vmin) * 0.3);
+    }
+  }
+
+  .skeleton-bg {
+    background-color: none;
+    @include bg-main-container($deg: 90deg, $first-color: rgb(116, 98, 158,0.3), $second-color: rgba(13,16,33,0.1));
+    animation: gradient 2s ease infinite;
+    min-height: 150px;
+  }
+
+  ///skeleton
+  .spinner {
+    
+    & svg {
+      width: calc(5vw * 3);
+      height: calc(5vw * 3);
+    }
+  }
+
+  .card-spinner {
+    & svg {
+      width: calc(17vw * 0.3);
+      height: calc(17vw * 0.3);
+    }
+  }
+
+  .error {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  ///// typporaphy 
+  .title {
+    font-size: calc((15vw + 2vmin) * 0.3);
+  }
+
+  .subtitle {
+    font-size: calc((5vw + 2vmin) * 0.3);
+  }
+
+  .card-title {
+    font-size: calc((3vw + 2vmin) * 0.3);
+  }
+
+  .trip-card-date {
+    margin: 0;
+    font-size: calc((2vw + 2vmin) * 0.3);
+  }
+}
+
+
+
+@media  screen and (width: 1024px) {
+  .aside-container {
+    position: relative;
+    overflow-y: auto;
+    height: 100vh;
+    width: 35%;
+  }
+
+  .modal-content {
+    width: 65%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    padding: 4%;
+    width: 65%;
+  }
+
+  .trip-edit-btn {
+    opacity: 1;
+  }
+
+  .header {
+    width: 35%;
+  }
+
+  .daily-trip-cast-card {
+    width: 100px;
+
+    & img {
+      width: calc(14vw * 0.4);
+      height: calc(14vw * 0.4);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 821px) {
+	.form {
+    width: 80%;
+  }
+}
