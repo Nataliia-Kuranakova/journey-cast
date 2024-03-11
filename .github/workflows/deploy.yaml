@@ -1,21 +1,32 @@
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - "main" 
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      - main  # or your default branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.2
+    - uses: actions/checkout@v2
+    - name: Set up Node
+      uses: actions/setup-node@v1
       with:
-        path: build 
+        node-version: '14'  # Use your project's required Node.js version
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
       env:
-        REACT_APP_API_WEATHER_SECRET_KEY: ${{ secrets.REACT_APP_API_WEATHER_SECRET_KEY }}
-        REACT_APP_API_GEONAMES_SECRET_KEY: ${{ secrets.REACT_APP_API_GEONAMES_SECRET_KEY }}
+        REACT_APP_API_WEATHER_SECRET_KEY: ${{ secrets.REACT_APP_API_WEATHER_SECRET_KEY}} 
+        REACT_APP_API_GEONAMES_SECRET_KEY: ${{ secrets.REACT_APP_API_GEONAMES_SECRET_KEY}} 
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+        branch: gh-pages  
+        folder: build  
+        token: ${{ secrets.GITHUB_TOKEN }}
