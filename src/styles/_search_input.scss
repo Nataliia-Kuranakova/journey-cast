@@ -44,7 +44,7 @@ input::placeholder {
 .search-input-icon {
   position: absolute;
   right: calc(1vw + 1vmin);
-  @include flex($jsf-content: end, $align: center);
+  @include flex($jsf-content: flex-end, $align: center);
 
   & button > svg {
     width:  calc((2vw + 2vmin) );
