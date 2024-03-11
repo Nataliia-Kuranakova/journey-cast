@@ -24,9 +24,10 @@ jobs:
         REACT_APP_API_WEATHER_SECRET_KEY: ${{ secrets.REACT_APP_API_WEATHER_SECRET_KEY}} 
         REACT_APP_API_GEONAMES_SECRET_KEY: ${{ secrets.REACT_APP_API_GEONAMES_SECRET_KEY}}
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v4
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages  
-        folder: build
+- name: Deploy
+  uses: JamesIves/github-pages-deploy-action@releases/v4
+  with:
+    branch: gh-pages  
+    folder: build 
+    token: ${{ secrets.GITHUB_TOKEN }}  
+
