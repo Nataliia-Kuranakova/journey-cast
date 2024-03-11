@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="458.487 325.427 22.6659 29.1837" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="sleet">
+<g opacity="1">
+<path d="M478.942 342.911L478.942 329.917C478.942 327.448 476.928 325.427 474.466 325.427C472.004 325.427 469.99 327.448 469.99 329.917L469.99 342.868C468.611 344.1 467.725 345.876 467.725 347.876C467.725 351.596 470.731 354.611 474.439 354.611C478.147 354.611 481.153 351.596 481.153 347.876C481.153 345.903 480.291 344.143 478.942 342.911Z" fill="#ebebeb" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M474.439 333.285L474.439 347.876" fill="none" opacity="1" stroke="#30b3ff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+<path d="M474.439 344.509C472.585 344.509 471.082 346.017 471.082 347.876C471.082 349.736 472.585 351.244 474.439 351.244C476.293 351.244 477.796 349.736 477.796 347.876C477.796 346.017 476.293 344.509 474.439 344.509Z" fill="#30b3ff" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+<g opacity="1">
+<path d="M458.58 347.647L460.027 345.691L462.373 346.436L462.376 348.852L460.031 349.6L458.58 347.647Z" fill="#efe9f4" fill-rule="nonzero" opacity="1" stroke="#efe9f4" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.18516"/>
+<path d="M466.306 338.446L465.385 339.671L463.912 339.191L463.922 337.671L465.401 337.21L466.306 338.446Z" fill="#efe9f4" fill-rule="nonzero" opacity="1" stroke="#efe9f4" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.18516"/>
+<path d="M464.296 331.348L462.823 333.143L460.625 332.326L460.738 330.025L463.007 329.42L464.296 331.348Z" fill="#efe9f4" fill-rule="nonzero" opacity="1" stroke="#efe9f4" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.18516"/>
+</g>
+</g>
+</svg>
