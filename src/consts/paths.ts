@@ -1,0 +1,1 @@
+export const tripsListPath = '/journey-cast/trips';

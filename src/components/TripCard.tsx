@@ -9,6 +9,7 @@ import {
   Trip,
   RetrievedLocationTripCast,
 } from '../store/apis/weatherCastApi/types';
+import { tripsListPath } from '../consts/paths';
 
 import { MdOutlineModeEdit } from 'react-icons/md';
 
@@ -111,9 +112,9 @@ const TripCard = ({
           className={`trip ${tripMark} ${
             isCardFocused ? 'focused' : ''
           } ${cardActionAnimation}`}
-          onClick={() => handleClickPathto(`/trips/${trip.name}`, trip)}
+          onClick={() => handleClickPathto(`${tripsListPath}/${trip.name}`, trip)}
           onKeyDown={(e) =>
-            handleTripCardKeyDown(e, `/trips/${trip.name}`, trip)
+            handleTripCardKeyDown(e, `${tripsListPath}/${trip.name}`, trip)
           }
           onFocus={handleCardFocus}
           onBlur={handleCardBlur}

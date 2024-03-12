@@ -5,6 +5,7 @@ import { useWeaterCastContext } from '../context/WeatherCastContext';
 import { useLazyFetchCityQuery } from '../store';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useDebounce from './useDebounce';
+import { tripsListPath } from '../consts/paths';
 
 const useForm = (initialValue: Trip) => {
   const [isBusy, setBusy] = useState(false);
@@ -75,8 +76,8 @@ const useForm = (initialValue: Trip) => {
     } else {
       setInputValue(inputValue);
     }
-    if (location.pathname !== '/trips') {
-      navigate('/trips');
+    if (location.pathname !== tripsListPath) {
+      navigate(tripsListPath);
     }
   };
 

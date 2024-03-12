@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useWeaterCastContext } from '../context/WeatherCastContext';
+import { tripsListPath } from '../consts/paths';
 
 import NavBar from './NavBar';
 import Slider from './Slider';
@@ -18,13 +19,13 @@ const Container = (): JSX.Element => {
         {tripsList.length === 0 && isFirstVisit && <EmptyTripsListMsg />}
         <NavBar />
         <Routes>
-          <Route path="trips" element={<TripsListPage />} />
-          <Route path="/" element={<NearestTripCastPage />} />
+          <Route path={tripsListPath} element={<TripsListPage />} />
+          <Route path="/journey-cast" element={<NearestTripCastPage />} />
           {tripsList.map((page) => {
             return (
               <Route
                 key={page.name}
-                path={`/trips/${page.name}`}
+                path={`${tripsListPath}/${page.name}`}
                 element={<SelectedTripCastPage />}
               />
             );

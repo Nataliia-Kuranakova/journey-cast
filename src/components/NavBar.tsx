@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useWeaterCastContext } from '../context/WeatherCastContext';
 import useDelayAnimation from '../hooks/useDelayAnimation';
+import { tripsListPath } from '../consts/paths';
 
 import { PiList } from 'react-icons/pi';
 import { IoAddCircleOutline } from 'react-icons/io5';
@@ -45,8 +46,8 @@ const NavBar = (): JSX.Element => {
   const location = useLocation();
 
   const navigationButton =
-    location.pathname !== '/trips' ? (
-      <Link to="trips">
+    location.pathname !== tripsListPath? (
+      <Link to={tripsListPath}>
         <Buttons>
           <PiList color="white" />
         </Buttons>

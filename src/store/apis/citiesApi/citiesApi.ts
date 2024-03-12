@@ -7,7 +7,7 @@ const citiesApiKey = process.env.REACT_APP_API_GEONAMES_SECRET_KEY;
 const citiesApi = createApi({
   reducerPath: 'cities',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://api.geonames.org/searchJSON?q=',
+    baseUrl: 'https://secure.geonames.org/searchJSON?q=',
   }),
   endpoints: (builder) => ({
     fetchCity: builder.query<CitiesList, string>({

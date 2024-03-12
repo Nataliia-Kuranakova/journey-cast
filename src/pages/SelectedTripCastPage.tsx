@@ -1,6 +1,7 @@
 import { useWeaterCastContext } from '../context/WeatherCastContext';
 import useMediaQuery from '../hooks/useMediaQuery';
 import useTripCastData from '../hooks/apis/useTripData';
+import { tripsListPath } from '../consts/paths';
 
 import { minWidth } from '../consts/min-width';
 
@@ -25,7 +26,7 @@ const SelectedTripCast = (): JSX.Element => {
   const pathLocation = useLocation();
 
   useEffect(() => {
-    if (pathLocation.pathname !== '/trips') {
+    if (pathLocation.pathname !== tripsListPath) {
       setSearchTerm('');
     }
   }, [pathLocation.pathname, setSearchTerm, searchTerm]);
