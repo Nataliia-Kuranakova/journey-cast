@@ -1,22 +1,19 @@
 .autocomplete-wrapper {
+  position: absolute;
   width: 100%;
   display: flex;
-  position: relative;
-  top: 0;
-  margin: -75px 0 0 0;
+  z-index: 30;
+  // margin: 80px 0 0 0;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 .autocomplete {
   padding: 10px 0 ;
-  border-radius: 0 0 15px 10px;
+  border-radius: 10px;
   background-color: rgb(32, 42, 85);
-  z-index: 30;
-  position: absolute; 
-  left: 0; 
-  right: 0; 
-  margin-top: 55px;
-  margin-left: auto; 
-  margin-right: auto; 
   width: 100%; 
 
   & li {
@@ -45,6 +42,5 @@
 }
 
 .warning-bg-color {
-  // background-color: rgb(255, 0, 0);
   background-color: rgb(192, 41, 41);
 }

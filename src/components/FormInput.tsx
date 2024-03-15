@@ -46,9 +46,9 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
 
     const inputIcon = dateInput ? <IoMdCalendar /> : cityNameInputIcon;
     return (
-      <div className="form-input-container">
-        <label>{label} </label>
-        <div className="form-input-wrapper">
+      <label className="label">
+        <div className="form-label-name"> {label}</div>
+        <div className="form-input-container datepicker-toggle">
           <div className="form-input-icon">{inputIcon}</div>
           <input
             ref={ref}
@@ -62,7 +62,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             onKeyDown={onKeyDown}
           />
         </div>
-      </div>
+      </label>
     );
   }
 );

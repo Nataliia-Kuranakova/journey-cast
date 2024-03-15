@@ -1,6 +1,7 @@
 .slide-container {
   overflow: hidden;
-  height: 100vh;
+  // height: 100vh;
+  height: 100%;
   position: fixed;
   @include flex($jsf-content: center, $align: center);
   @include bg-main-container($first-color: #202a55, $second-color:  #74629e);

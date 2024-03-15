@@ -70,27 +70,29 @@ const Form = ({ trip, modalId }: FormProps) => {
 
   return (
     <form className="form" onSubmit={handleSubmitTrip}>
-      <FormInput
-        ref={inputRef}
-        inputValue={inputValue.name}
-        dateInput={false}
-        label="Enter the city"
-        type="text"
-        name="name"
-        value={inputValue.name}
-        onChange={handleInputValueChange}
-        onClick={handleClearAutocomlete}
-        autoComplete="off"
-        onKeyDown={handleInputKeyDown}
-      />
-      <div ref={autocompleteRef} className="autocomplete-wrapper">
+      <div >
+        <FormInput
+          ref={inputRef}
+          inputValue={inputValue.name}
+          dateInput={false}
+          label="Enter the city"
+          type="text"
+          name="name"
+          value={inputValue.name}
+          onChange={handleInputValueChange}
+          onClick={handleClearAutocomlete}
+          autoComplete="off"
+          onKeyDown={handleInputKeyDown}
+        />
         {shouldRenderAutocomplete && data && (
-          <Autocomplete
-            data={data}
-            isAutocomplete={isBusy}
-            onCorrectSpelling={handleCorrectSpelling}
-            onAutocompleteData={handleAutocompleteData}
-          />
+          <div ref={autocompleteRef} className="autocomplete-wrapper">
+            <Autocomplete
+              data={data}
+              isAutocomplete={isBusy}
+              onCorrectSpelling={handleCorrectSpelling}
+              onAutocompleteData={handleAutocompleteData}
+            />
+          </div>
         )}
       </div>
 

@@ -8,15 +8,15 @@
   }
  
   .height-less {
-    height: 66vh;
+    height: 80vh;
     padding-top: calc(8vh + 1vw);
     animation: shrink 1s;
   }
   
   .height-more {
     height: 108vh;
-    padding-top: calc(22vh + 1vw);
-    animation: elongate 0.8s;
+    padding-top: calc(16vh + 1vw);
+    animation: elongate .8s;
   }
 
   .fixed-arrow{
@@ -54,20 +54,17 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 1% 5%;
-    height: 100vh;
+    // height: 100vh;
+    height: 100%;
     position: fixed;
     bottom: 0;
     right: 0;
     width: 70%;
-    /// work with this dimantions !!!!!
-    // width: calc((70vw + 70vh + 1vmin) * 0.7 );
-    ///////
   }
 
   .aside-container {
     position: relative;
     overflow-y: auto;
-    height: 100vh;
     width: 30%;
     background-color: rgba(13,16,33,0.5);
     padding: 100px 0 0 0;
@@ -79,7 +76,8 @@
 
   .aside-container--empty-trips-list {
     width: 30%;
-    height: 100vh;
+    // height: 100vh;
+    height: 100%;
     display: flex;
     background-color: $interactive-modul-color;
     align-content: center;
@@ -119,6 +117,10 @@
   .form {
     width: 80%;
   }
+
+  // .form-input-container {
+  //   height: calc((10vw + 10vh + 10vmin) * 0.3);
+  // } 
 
   .search-input-container {
     width: calc((50vw + 2vmin) * 0.3);
@@ -348,7 +350,7 @@
   .aside-container {
     position: relative;
     overflow-y: auto;
-    height: 100vh;
+    // height: 100vh;
     width: 35%;
   }
 
