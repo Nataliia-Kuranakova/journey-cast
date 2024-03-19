@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/journey-cast/static/css/main.7c94a6c3.css",
-    "main.js": "/journey-cast/static/js/main.5903192c.js",
+    "main.css": "/journey-cast/static/css/main.a6df3d99.css",
+    "main.js": "/journey-cast/static/js/main.a54021e0.js",
     "static/media/fog.svg": "/journey-cast/static/media/fog.5c16aeb9ee014421c93ece27c5ab4c32.svg",
     "static/media/wind.svg": "/journey-cast/static/media/wind.77b1a870ccd2f1247531aa85a9ff5487.svg",
     "static/media/rain-snow-showers-night.svg": "/journey-cast/static/media/rain-snow-showers-night.a20dc24ab1407f69f94cd36fa362bfe7.svg",
@@ -26,11 +26,11 @@
     "static/media/clear-night.svg": "/journey-cast/static/media/clear-night.10e3f5bd737984f9efa4812f6dbd923b.svg",
     "static/media/clear-day.svg": "/journey-cast/static/media/clear-day.19060be8bdda932e824af9a421e52f61.svg",
     "static/media/default-icon.svg": "/journey-cast/static/media/default-icon.20497016d0e1be3002f6657adfaf27a4.svg",
-    "main.7c94a6c3.css.map": "/journey-cast/static/css/main.7c94a6c3.css.map",
-    "main.5903192c.js.map": "/journey-cast/static/js/main.5903192c.js.map"
+    "main.a6df3d99.css.map": "/journey-cast/static/css/main.a6df3d99.css.map",
+    "main.a54021e0.js.map": "/journey-cast/static/js/main.a54021e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c94a6c3.css",
-    "static/js/main.5903192c.js"
+    "static/css/main.a6df3d99.css",
+    "static/js/main.a54021e0.js"
   ]
 }
