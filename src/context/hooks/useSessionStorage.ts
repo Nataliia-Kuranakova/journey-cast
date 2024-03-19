@@ -22,23 +22,3 @@ export function useSessionStorage(key: string, initialValue: Trip | null) {
 
   return [storedValue, setStoredValue] as const;
 }
-
-/// previous code in context
-
-// const [trip, setTrip] = useState<Trip | null>(null);
-
-// useEffect(() => {
-  //   if (trip === null) {
-  //     const storedTrip = sessionStorage.getItem('selectedTrip');
-  //     if (storedTrip) {
-  //       setTrip(JSON.parse(storedTrip));
-  //     }
-  //   }
-  // }, [trip]);
-
-
-// const handleSetWithSessionStorage = (trip: Trip) => {
-  //   // console.log('trip context ', trip)
-  //   setTrip(trip);
-  //   sessionStorage.setItem('selectedTrip', JSON.stringify(trip));
-  // };

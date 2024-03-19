@@ -1,6 +1,6 @@
-import useSortTripsList from '../hooks/useSortTripsList';
 import useMediaQuery from '../hooks/useMediaQuery';
 import useTripCastData from '../hooks/apis/useTripData';
+import useSortTripsList from '../hooks/useSortTripsList';
 import { useWeaterCastContext } from '../context/WeatherCastContext';
 
 import { minWidth } from '../consts/min-width';
@@ -40,9 +40,7 @@ const NearestTripCastPage = (): JSX.Element => {
         ) : (
           <>
             {tripCurrentCastData && (
-              <WeatherForecast
-                data={tripCurrentCastData}
-              />
+              <WeatherForecast data={tripCurrentCastData} />
             )}
           </>
         )}

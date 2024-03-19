@@ -19,7 +19,7 @@ const useForm = (initialValue: Trip) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  console.log('spelling ', correctSpelling);
+  // console.log('spelling ', correctSpelling);
 
   const { name, start, end } = inputValue;
 
@@ -90,6 +90,7 @@ const useForm = (initialValue: Trip) => {
     correctSpelling,
     handleSubmit,
     setInputValue,
+    setCorrectSpelling,
     handleAutocompleteData,
     handleClearAutocomlete,
     handleInputValueChange,

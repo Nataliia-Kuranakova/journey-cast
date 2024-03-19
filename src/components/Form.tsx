@@ -49,7 +49,7 @@ const Form = ({ trip, modalId }: FormProps) => {
     if (trip) {
       handleCorrectSpelling(trip.name);
     }
-  });
+  }, []);
 
   const handleSubmitTrip = (event: React.FormEvent<HTMLFormElement>) => {
     handleSubmit(event);
@@ -70,7 +70,7 @@ const Form = ({ trip, modalId }: FormProps) => {
 
   return (
     <form className="form" onSubmit={handleSubmitTrip}>
-      <div >
+      <div>
         <FormInput
           ref={inputRef}
           inputValue={inputValue.name}

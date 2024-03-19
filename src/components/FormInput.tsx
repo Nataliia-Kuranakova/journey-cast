@@ -22,15 +22,15 @@ interface FormInputProps {
 const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
   (
     {
-      inputValue,
-      label,
       type,
       name,
+      label,
       value,
       onClick,
       onChange,
       onKeyDown,
       dateInput,
+      inputValue,
       autoComplete,
     },
     ref
